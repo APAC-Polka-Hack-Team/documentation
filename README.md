@@ -34,9 +34,9 @@ In a Darkpool DEX, users will send only three pieces of information:
 
 3) The **SIZE** of their order (Note: the convention again is the SIZE refers to the size of the first symbol of a market pair. For example, “BUY 100 DOTUSD” means the user intends to buy 100 DOTs, or roughly $40,000 USD worth of DOTs (assuming 1 DOT = $40). )
 
-Importantly, note that users do not send any indication of what price they intend to buy or sell at. When a buyer sends their order, they will enter a “bids” queue, sorted by FIFO (first in, first out).
+Importantly, note that users do not send any indication of what price they intend to buy or sell at. When a buyer sends their order, they will enter a “bids” queue, sorted by FIFO (first in, first out). Similarly, when a seller sends their order, they will enter an “asks” queue, sorted by FIFO.
 
-Similarly, when a seller sends their order, they will enter an “asks” queue, sorted by FIFO.
+![](assets/queuediagram.jpg)
 
 A trade is executed when there is both an order in the “bids” queue and an order in the “asks” queue. The price at which the trade is executed will be determined by an external reference price, provided via HTTP request. Practically, what this means is the smart contract will request for the current price from one (or more) centralized orderbook exchanges, such as Coinbase, Kraken, Binance, etc. The HTTP request will return the best bid/best offer from these exchanges and the smart contract will calculate the **mid price**. Theoretically, this mid price represents the true value or fair value of the market pair at the current time. Finally, this mid price will be used as the execution price for the matched buy and sell order.
 
