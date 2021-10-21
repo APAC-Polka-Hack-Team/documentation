@@ -2,6 +2,18 @@
 
 Broadly, we’ve identified four different areas to work on in order to produce a minimum proof-of-concept. If you're interested in learning more or contributing to any of these areas, there will be a lead contact (discord handle) listed for each section.
 
+# Links
+
+Currently our project is working off a fork of Phala's phala-blockchain and js-sdk repos. By convention, the APAC-Polka-Hack-Team branch serves as our "master" branch for our code work. For quick reference:
+
+This is where all the smart contract examples are stored on the phala-blockchain repo. The darkpool smart contract file specifically is darkpool.rs:
+
+https://github.com/APAC-Polka-Hack-Team/phala-blockchain/tree/APAC-Polka-Hack-Team/crates/phactory/src/contracts
+
+This is where the front-end logic is stored. The darkpool frontend file specifically is darkpool.tsx:
+
+https://github.com/APAC-Polka-Hack-Team/js-sdk/tree/APAC-Polka-Hack-Team/packages/example/pages
+
 # 1. Order Matching Logic
 
 Written in Rust using Phala’s smart contract format, this includes the definitions for the order data structures, basic logic for adding, updating, and canceling orders, as well as matching buy and sell orders. The code logic should follow the format described in the README under section “Darkpool DEX: Business Logic”.
