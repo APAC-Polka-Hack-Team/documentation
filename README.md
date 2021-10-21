@@ -1,4 +1,4 @@
-**UPDATE:** Please check out the TASKS.md file in this repo for a summary of project's to-do list. If you are able to help contribute in any of these areas or just interested to learn more about it, please let the group know (probably best in the Discord channel for now).
+**UPDATE:** Please check out the TASKS.md file in this repo for a summary of the project's to-do list. If you are able to help contribute in any of these areas or just interested to learn more about it, please let the group know (probably best in the Discord channel for now).
 
 # Summary
 
@@ -36,9 +36,9 @@ In a Darkpool DEX, users will send only three pieces of information:
 
 1) The **MARKET** they intend to interact with (eg DOTUSD, KSMUSD, ETHUSD, BTCUSD, etc)
 
-2) The **SIDE** of their order (eg BUY or SELL. Note: The convention is BUY refers to buying the first symbol of a market pair, and SELL refers to selling the first symbol of a market pair. That is, “BUY DOTUSD” means the user intends to buy DOT and sell USD.)
+2) The **SIDE** of their order (eg BUY or SELL. Note: The convention is BUY refers to buying the first symbol of a market pair, and SELL refers to selling the first symbol of a market pair. That is, “BUY DOTUSD” means the user intends to buy DOT and sell USD. Conversely, "SELL DOTUSD" means the user intends to sell DOT and buy USD.)
 
-3) The **SIZE** of their order (Note: the convention again is the SIZE refers to the size of the first symbol of a market pair. For example, “BUY 100 DOTUSD” means the user intends to buy 100 DOTs, or roughly $40,000 USD worth of DOTs (assuming 1 DOT = $40). )
+3) The **SIZE** of their order (Note: the convention again is the SIZE refers to the size of the first symbol of a market pair. For example, assuming 1 DOT = $40, “BUY 100 DOTUSD” means the user intends to buy 100 DOTs and pay $40,000 USD. Conversely, "SELL 100 DOTUSD" means the user intends to sell 100 DOTs and receive $40,000 USD.)
 
 Importantly, note that users do not send any indication of what price they intend to buy or sell at. When a buyer sends their order, they will enter a “bids” queue, sorted by FIFO (first in, first out). Similarly, when a seller sends their order, they will enter an “asks” queue, sorted by FIFO.
 
